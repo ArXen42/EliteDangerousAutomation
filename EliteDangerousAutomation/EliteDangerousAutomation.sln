@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteDangerousAutomation.Vision", "EliteDangerousAutomation.Vision\EliteDangerousAutomation.Vision.csproj", "{3E1F0F00-9D1E-4999-B2BD-83C0E31FBD12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliteDangerousAutomation.AutoPilot", "EliteDangerousAutomation.AutoPilot\EliteDangerousAutomation.AutoPilot.csproj", "{C319A0B7-7D9C-46B4-BA47-84807DB963EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E1F0F00-9D1E-4999-B2BD-83C0E31FBD12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E1F0F00-9D1E-4999-B2BD-83C0E31FBD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E1F0F00-9D1E-4999-B2BD-83C0E31FBD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E1F0F00-9D1E-4999-B2BD-83C0E31FBD12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C319A0B7-7D9C-46B4-BA47-84807DB963EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C319A0B7-7D9C-46B4-BA47-84807DB963EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C319A0B7-7D9C-46B4-BA47-84807DB963EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C319A0B7-7D9C-46B4-BA47-84807DB963EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69016533-C943-470E-A5FA-A852CAD34F9D}
+	EndGlobalSection
+EndGlobal
