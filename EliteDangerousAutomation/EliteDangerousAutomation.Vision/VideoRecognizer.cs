@@ -27,7 +27,7 @@ namespace EliteDangerousAutomation.Vision
 
 		private void OnNewFrame(Object sender, NewFrameEventArgs eventArgs)
 		{
-			var frameDataEventArgs = new FrameDataEventArgs(new FrameData(eventArgs.Frame));
+			var frameDataEventArgs = new FrameDataEventArgs(FrameData.FromFrameBitmap(eventArgs.Frame));
 			FrameDataReceived?.Invoke(this, frameDataEventArgs);
 		}
 	}
