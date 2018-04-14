@@ -8,7 +8,7 @@ namespace EliteDangerousAutomation.Vision
 	internal struct FrameData
 	{
 		/// <summary>
-		///     Perform frame analysis and puts result into provided <see cref="destinationFrameData"/>.
+		///     Perform frame analysis and puts result into provided <see cref="destinationFrameData" />.
 		/// </summary>
 		/// <param name="frame">Frame bitmap.</param>
 		/// <param name="destinationFrameData">Destination frame data.</param>

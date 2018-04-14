@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using EliteDangerousAutomation.Vision;
 using Emgu.CV;
 using Emgu.CV.Cuda;
 using Emgu.CV.CvEnum;
@@ -15,13 +16,31 @@ namespace EliteDangerousAutomation.AutoPilot
 	{
 		private static void Main(String[] args)
 		{
-			Mat img = new Mat("img.jpg");
-			Mat detail = new Mat("detail.png");
-
-
-			var result = DrawMatches.Draw(detail, img);
+			var img = new Mat("image.png").ToImage<Bgr, Byte>();
+			var result = FrameAnalysis.GetAdaptiveThresholdedFrame(img);
 
 			result.Save("res.png");
+		}
+
+		public static Mat GetEdges(Mat src)
+		{
+			const Single scharrKernelNormalizationDivisor = 16.0f;
+			const Single scharrKernelNormalizationFactor = 1.0f / scharrKernelNormalizationDivisor;
+
+			src.ConvertTo(src, DepthType.Cv32F, 1 / 255d);
+
+			var gradX = new Mat();
+			var gradY = new Mat();
+
+			CvInvoke.Scharr(src, gradX, DepthType.Cv32F, 1, 0, scharrKernelNormalizationFactor);
+			CvInvoke.Scharr(src, gradY, DepthType.Cv32F, 0, 1, scharrKernelNormalizationFactor);
+
+			var outImg = new Mat();
+			CvInvoke.CartToPolar(gradX, gradY, outImg, new Mat());
+
+			outImg.ConvertTo(outImg, DepthType.Cv8U, 255);
+
+			return outImg;
 		}
 	}
 
